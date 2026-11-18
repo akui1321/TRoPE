@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- Adapted for the TRoPE project page; see THIRD_PARTY_NOTICES.md. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TRoPE makes mesh connectivity explicit in motion retrieval to reduce sticking artifacts in video-to-4D generation.">
+  <meta name="theme-color" content="#6567c9">
+  <title>TRoPE: Topology-Aware Relative Positional Encoding for 4D Generation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts/avenir-next/stylesheet.css">
+  <link rel="stylesheet" href="fonts/segoe-print/stylesheet.css">
+  <link rel="stylesheet" href="icons/style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/trope.css">
+  <script defer src="js/cases.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+<main id="main">
+  <header>
+    <h1 id="title" class="x-gradient-font">
+      <span class="x-title-large">TRoPE</span>
+      <span class="x-title-medium">Topology-Aware Relative Positional Encoding<br class="desktop-break"> for 4D Generation</span>
+    </h1>
+    <div id="authors">
+      <div>Chengzhuo Gui</div>
+      <div>Zhenglin Zhou</div>
+      <div>Fan Ma</div>
+      <div>Zongxin Yang</div>
+      <div>Yi Yang</div>
+    </div>
+    <div id="institution">
+      <div><a class="link" href="https://www.zju.edu.cn/" target="_blank" rel="noopener">Zhejiang University</a></div>
+    </div>
+    <div id="links" aria-label="Project resources">
+      <div><span id="paper" class="resource-pending" aria-label="Paper, coming soon">Paper <small>Coming soon</small></span></div>
+      <div><span id="code" class="resource-pending" aria-label="Code, coming soon">Code <small>Coming soon</small></span></div>
+      <div><span id="dataset" class="resource-pending" aria-label="Dataset, coming soon">Dataset <small>Coming soon</small></span></div>
+    </div>
+    <p class="x-note intro">
+      TRoPE reduces sticking artifacts in video-to-4D generation by making mesh connectivity
+      explicit in motion retrieval. It helps nearby parts follow their own motion and separate after contact.
+    </p>
+  </header>
+
+  <figure id="teaser" class="teaser-figure">
+    <a href="assets/teaser/teaser.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution TRoPE teaser">
+      <picture>
+        <source srcset="assets/teaser/teaser.webp" type="image/webp">
+        <img src="assets/teaser/teaser.png" width="2520" height="1320" fetchpriority="high"
+          alt="TRoPE reduces sticking artifacts: reference video, Motion 3-to-4 and TRoPE motion sequences, with close-up comparisons of hand and limb separation.">
+      </picture>
+    </a>
+  </figure>
+
+  <section aria-labelledby="results-heading">
+    <h2 class="x-section-title"><span id="results-heading" class="x-gradient-font">Results</span></h2>
+    <p class="x-note results-note">Nine examples across human and other articulated geometries. The four videos in each example play together; the reconstructed meshes share the same camera.</p>
+    <div id="results-manipulation" aria-label="Reconstruction results"></div>
+    <div class="x-carousel-nav" aria-label="Result pages">
+      <button id="page-prev" class="x-carousel-switch" type="button" aria-label="Previous results page">&#9664;</button>
+      <div class="x-carousel-pages" id="page-buttons" role="group" aria-label="Choose a results page"></div>
+      <button id="page-next" class="x-carousel-switch" type="button" aria-label="Next results page">&#9654;</button>
+    </div>
+    <p id="page-status" class="page-status" aria-live="polite"></p>
+    <noscript><p>Enable JavaScript to browse all nine examples. The paper link will be added when the preprint is available.</p></noscript>
+  </section>
+
+  <section aria-labelledby="acknowledgement-heading">
+    <h2 class="x-section-title"><span id="acknowledgement-heading" class="x-gradient-font">Acknowledgement</span></h2>
+    <p class="x-note">
+      This project webpage is built upon the <a class="link" href="https://microsoft.github.io/TRELLIS/" target="_blank" rel="noopener">TRELLIS project page</a>.
+      We thank the TRELLIS authors for open-sourcing their webpage design and assets.
+    </p>
+  </section>
+
+  <section aria-labelledby="citation-heading">
+    <h2 class="x-section-title"><span id="citation-heading" class="x-gradient-font">Citation</span></h2>
+    <p class="x-note">Citation details will be added when a public preprint becomes available.</p>
+  </section>
+</main>
+</body>
+</html>
