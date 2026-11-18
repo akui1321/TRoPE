@@ -37,7 +37,7 @@
     slider.setAttribute('aria-label',`Playback position for ${info.title}`);
     const time=element('span','time-label','0.0 / 3s');
     controls.append(toggle,slider,time);
-    card.append(heading,video,controls,element('p','case-caption','Input camera at left; a shared novel view for the three meshes. Slowed playback with a brief hold on the final frame.'));
+    card.append(heading,video,controls);
     let wantsPlay=false,active=false,disposed=false,seeking=false,autostarted=false,pending=false,frame=0;
     let restoreTime=0,layout='';
     function label(){toggle.textContent=wantsPlay?'Pause':'Play';toggle.setAttribute('aria-label',`${wantsPlay?'Pause':'Play'} ${info.title}`);}
@@ -98,7 +98,7 @@
     players.forEach(p=>p.dispose());players=[];gallery.replaceChildren();
     cases.slice(page*perPage,(page+1)*perPage).forEach(info=>{const p=createCase(info);players.push(p);gallery.append(p.card);});
     [...dots.children].forEach((dot,index)=>{const selected=index===page;dot.classList.toggle('x-carousel-page-active',selected);dot.setAttribute('aria-current',selected?'page':'false');});
-    document.getElementById('page-status').textContent=`Page ${page+1} of ${pageCount} · Examples ${page*perPage+1}–${Math.min((page+1)*perPage,cases.length)} of ${cases.length}`;
+    document.getElementById('page-status').textContent=`Page ${page+1} of ${pageCount} · Examples ${page*perPage}–${Math.min((page+1)*perPage,cases.length)-1} of ${cases.length}`;
   }
   function go(index){page=(index+pageCount)%pageCount;render();}
   for(let i=0;i<pageCount;i++){
